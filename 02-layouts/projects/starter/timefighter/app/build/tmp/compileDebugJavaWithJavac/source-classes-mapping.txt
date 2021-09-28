@@ -1,0 +1,2 @@
+com/raywenderlich/timefighter/BuildConfig.java
+ com.raywenderlich.timefighter.BuildConfig
