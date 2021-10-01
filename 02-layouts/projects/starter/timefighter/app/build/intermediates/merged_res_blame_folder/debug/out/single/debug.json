@@ -44,6 +44,10 @@
         "source": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
     },
     {
+        "merged": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/build/intermediates/res/merged/debug/anim_bounce.xml.flat",
+        "source": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/src/main/res/anim/bounce.xml"
+    },
+    {
         "merged": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/build/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
         "source": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
@@ -54,6 +58,10 @@
     {
         "merged": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/build/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/build/intermediates/res/merged/debug/menu_menu.xml.flat",
+        "source": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/src/main/res/menu/menu.xml"
     },
     {
         "merged": "/home/reptilefury/Documents/aa-materials/02-layouts/projects/starter/timefighter/app/build/intermediates/res/merged/debug/layout_activity_main.xml.flat",
