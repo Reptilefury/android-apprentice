@@ -1,36 +1,59 @@
-package com.example.recyclerviewnasaapi
+package com.raywenderlich.galacticon
 
-import android.provider.ContactsContract
+import android.content.Intent
+import androidx.recyclerview.widget.RecyclerView
+
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import com.example.recyclerviewnasaapi.R
+import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.recyclerview_item_row.view.*
 
-class RecyclerAdpter(private val photos: ArrayList<ContactsContract.Contacts.Photo>): RecyclerView.Adapter<RecyclerAdpter.PhotoHolder>(){
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdpter.PhotoHolder {
-        TODO("Not yet implemented")
+class RecyclerAdapter(private val photos: ArrayList<Photo>) :
+    RecyclerView.Adapter<RecyclerAdapter.PhotoHolder>() {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerAdapter.PhotoHolder {
+        val inflatedView = parent.inflate(
+            R.layout.recyclerview_item_row,
+            false
+        )
+        return PhotoHolder(inflatedView)
+
     }
 
-    override fun onBindViewHolder(holder: RecyclerAdpter.PhotoHolder, position: Int) {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: RecyclerAdapter.PhotoHolder, position: Int) {
+        val itemPhoto = photos[position]
+        holder.bindPhoto(itemPhoto)
     }
 
     override fun getItemCount() = photos.size
-   class  PhotoHolder(v:View):RecyclerView.ViewHolder(v), View.OnClickListener{
+    class PhotoHolder(v: View) : RecyclerView.ViewHolder(v), View.OnClickListener {
+        private var view: View = v
+        private var photo: Photo? = null
 
-         private val view:View = v
-         private  val photo: ContactsContract.Contacts.Photo? = null
+        init {
+            v.setOnClickListener(this)
+        }
 
-       init {
-           v.setOnClickListener(this)
-       }
+        override fun onClick(v: View?) {
+            Log.d("RecyclerView", "CLICK")
+            val context = itemView.context
+            val showPhotoIntent = Intent(context, PhotoActivity::class.java)
+            showPhotoIntent.putExtra(PHOTO_KEY, photo)
+            context.startActivity(showPhotoIntent)
 
-       override fun onClick(v: View?) {
-           Log.d("RecyclerView","Click!")
-       }
-       companion object{
-           private  val PHOTO_KEY = "PHOTO"
-       }
+        }
 
-   }
+        companion object {
+            private val PHOTO_KEY = "PHOTO"
+        }
+
+        fun bindPhoto(photo: Photo) {
+            this.photo = photo
+            Picasso.with(view.context).load(photo.url).into(view.itemImage)
+            view.itemDate.text = photo.humanDate
+            view.itemDescription.text = photo.explanation
+        }
+    }
 }

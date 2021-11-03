@@ -2,4 +2,6 @@
     <string name="app_name">RecyclerView Nasa Api</string>
     <string name="api_key">657gVbJqgEIThKrGHcCq5zeN2vbKEsxFliPDzYGx
 </string>
+    <string name="textview">TextView</string>
+    <string name="todo">TODO</string>
 </resources>

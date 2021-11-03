@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/reptilefury/StudioProjects/RecyclerViewNasaApi/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+            "map": [
+                {
+                    "source": "/home/reptilefury/.gradle/caches/transforms-3/91830759e6f92b579445f8f282ae53de/transformed/material-1.4.0/res/values-h550dp-port-v13/values-h550dp-port-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "76",
+                        "endOffsets": "127"
+                    }
+                }
+            ]
+        }
+    ]
+}
