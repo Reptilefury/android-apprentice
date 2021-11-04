@@ -3,7 +3,6 @@ package com.example.recyclerviewnasaapi
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.activity_photo.*
 
 class PhotoActivity : AppCompatActivity() {
     private var selectedPhoto: Photo? = null
