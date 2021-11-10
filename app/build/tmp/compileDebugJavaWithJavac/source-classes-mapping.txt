@@ -1,0 +1,2 @@
+com/raywenderlich/listmaker/BuildConfig.java
+ com.raywenderlich.listmaker.BuildConfig
